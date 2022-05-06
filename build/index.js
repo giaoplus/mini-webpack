@@ -7,6 +7,7 @@ import ejs from 'ejs'
 import { jsonLoader } from './jsonloader.js'
 import MiniSizePlugin from './miniSizePlugin.js'
 import { SyncHook } from 'tapable'
+import FormatPlugin from './formatPlugin.js'
 
 const _dirname = path.resolve('./')
 let moduleId = 0
@@ -24,7 +25,8 @@ const webpackConfig = {
     }]
   },
   plugins: [
-    new MiniSizePlugin()
+    // new MiniSizePlugin(),
+    new FormatPlugin()
   ]
 }
 
